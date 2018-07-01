@@ -1,0 +1,6 @@
+# create resource group in Azure
+az group create -l westus -n vending-machine-resource-group
+# create azure iot hub
+az iot hub create --name vending-machine-hub --resource-group vending-machine-resource-group --sku F1
+# create single device and attach to azure iot hub. give name with cfe-vendmachine-1
+az iot hub device-identity create --hub-name vending-machine-hub --device-id cfe-vendmachine-1
