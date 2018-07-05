@@ -1,0 +1,23 @@
+{
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "IoTHubMessages",
+      "direction": "in",
+      "path": "samples-workitems",
+      "connection": "vending-machine-hub_events_IOTHUB",
+      "cardinality": "many",
+      "consumerGroup": "$Default"
+    },
+    {
+      "type": "documentDB",
+      "name": "vend-machinedata",
+      "databaseName": "vending-machine-data",
+      "collectionName": "Machine-data-collection",
+      "createIfNotExists": true,
+      "connection": "vending-machine-data_DOCUMENTDB",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
