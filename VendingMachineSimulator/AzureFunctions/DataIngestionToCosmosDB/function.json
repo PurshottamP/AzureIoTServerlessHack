@@ -1,14 +1,16 @@
 {
+  "disabled": false,
   "bindings": [
     {
-      "type": "eventHubTrigger",
-      "name": "IoTHubMessages",
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
       "direction": "in",
-      "path": "samples-workitems",
-      "connection": "vending-machine-hub_events_IOTHUB",
-      "cardinality": "many",
-      "consumerGroup": "$Default"
+      "name": "req"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
     }
-  ],
-  "disabled": false
+  ]
 }
